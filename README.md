@@ -79,11 +79,13 @@ AWS Lambda Functionはステートレスなので、S3に最終取得ツイー�
 
 ### 定期実行
 
-CloudWatch Eventを利用し、定期的（15分ごと）にこのLambda Functionを実行します。
+CloudWatch Eventを利用し、定期的（例では15分ごと）にこのLambda Functionを実行します。
 
-設定値(最新の設定はAWS Lambdaの設定画面を参照してください)
+設定の例
 
 ```
 cron(0/15 * * * ? *)
 ```
+
+その他設定の詳細は[公式ドキュメント](https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/events/ScheduledEvents.html)を参照してください
 
