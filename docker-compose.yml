@@ -1,0 +1,14 @@
+version: "3.4"
+services:
+  lambda:
+    image: node:8.10
+    working_dir: /app
+    command: node driver.js
+    restart: always
+    volumes:
+      - ./:/app
+      - node_modules:/app/node_modules
+    env_file: .env
+volumes:
+  node_modules:
+    driver: local
